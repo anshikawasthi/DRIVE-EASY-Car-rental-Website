@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to DRIVE EASY Rentals</title>
+</head>
+
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-image: url('rep.gif'); background-size: cover; background-position: center; color: white;">
+
+<header style="background-color: #000; color: #fff; padding: 30px 0; text-align: center; margin-bottom: 20px;">
+    <h1 style="color: #1F45FC; font-family: 'fantasy'; margin: 0; padding: 10px;">DRIVE EASY</h1>
+</header>
+
+<div style="max-width: 1400px; margin: 0 auto; padding: 5px;">
+
+    <nav style="text-align: center; margin-top: 5px; margin-bottom: 20px;">
+        
+        <a href="home.html" style= " text-decoration: none; font-weight: bold;">Home</a>
+        <a href="about.html" style="padding: 10px 20px; text-decoration: none; font-weight: bold;">About</a>
+        <a href="services1.html" style="background-color: gray; color: #fff; padding: 10px 20px; border-radius: 5px;padding: 10px 20px; text-decoration: none; font-weight: bold;">Services</a>
+        <a href="feedback.html" style="padding: 10px 20px; text-decoration: none; font-weight: bold;">Feedback</a>
+        <a href="ourcars.html" style="padding: 10px 20px; text-decoration: none; font-weight: bold;">Our Cars</a> 
+    </nav>
+
+    <div style="text-align: left; margin-top: 30px;">
+        <h2 style="font-family: cursive; color: black;text-align: center">Welcome to our CAR REPAIRING Service!</h2>
+        <h3 style="color: black;">Online Booking</h3>
+        <div style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 70px; display: flex; justify-content: space-between;">
+            <div style="flex: 1;">
+                <p style="color: black; font-weight: bold;">Please select your preferred date and time for repair:</p>
+                <form id="repair-form" action="#" method="post">
+                    <label for="repair-date" style="color: black;">Repair Date:</label><br>
+                    <input type="date" id="repair-date" name="repair-date" required><br><br>
+                    <label for="repair-time" style="color: black;">Repair Time:</label><br>
+                    <input type="time" id="repair-time" name="repair-time" required><br><br>
+                    <label for="repair-type" style="color: black;font-weight: bold">Type of Repair:</label><br>
+                    <select id="repair-type" name="repair-type" required>
+                        <option value="basic">Basic Maintenance</option>
+                        <option value="major">Major Repairs</option>
+                    </select><br><br>
+                    <p id="repair-price" style="color: black;">Price: ₹<span id="price">0</span></p>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="bill" style="display: none; margin-top: 20px;"></div>
+            </div>
+            <div style="flex: 1; padding-left: 10px;">
+                <div style="text-align: center;">
+                    <img src="mech1.jpg" alt="Mechanic 1" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 10px;">
+                    <p style="color: black; font-size: 14px;font-weight: bold;">John Doe<br>12 years of experience. Handles major repairs </p>
+                   
+                </div>
+                <div style="text-align: center;">
+                    <img src="mech2.jpg" alt="Mechanic 2" style="width: 150px; height: 150px; border-radius: 50%;">
+                    <p style="color: black; font-size: 14px;font-weight: bold;">Jane Smith<br>6 years of experience. Handles basic maintenance</p>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer style="background-color: #444; color: #fff; padding: 20px; text-align: left; margin-top: 50px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <div>
+            <p style="color: white;">Get In Touch:</p>
+            <p style="color: white;">📍 123 Street,Hyderabad, India &nbsp; &nbsp; &nbsp; 📞 +012 345 67890 &nbsp; &nbsp; &nbsp; ✉️ driveeasy@gmail.com</p>
+            <p style="color: white;">Follow Us: &nbsp; &nbsp; &nbsp; 📸 📘 🐦</p>
+            <p style="color: white;">Useful Links:</p>
+            <p style="color: white;"><a href="privacy.html" style="color: white;">Private Policy</a> | <a href="t&c.html" style="color: white;">Terms and conditions </a>| <a href="help.html" style="color: white;">Help & FAQs</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('repair-type').addEventListener('change', function() {
+        var repairType = document.getElementById('repair-type').value;
+        var priceDisplay = document.getElementById('price');
+        if (repairType === 'basic') {
+            priceDisplay.textContent = '9000';
+        } else if (repairType === 'major') {
+            priceDisplay.textContent = '20,000';
+        }
+    });
+
+    document.getElementById('repair-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var repairDate = document.getElementById('repair-date').value;
+        var repairTime = document.getElementById('repair-time').value;
+        var repairType = document.getElementById('repair-type').value;
+        var price = document.getElementById('price').textContent;
+        var appointmentNumber = generateAppointmentNumber();
+        var bill = `
+            <h2  style="color: black; font-weight: bold;"> Appointment Details</h2>
+            <p style="color: black;">Appointment Number: ${appointmentNumber}</p>
+            <p style="color: black;">Repair Date: ${repairDate}</p>
+            <p style="color: black;">Repair Time: ${repairTime}</p>
+            <p style="color: black;">Type of Repair: ${repairType}</p>
+            <p style="color: black;">Price: ₹${price}</p>
+            <p style="color: black;"><strong>Note:</strong> Please visit our showroom to pay the price and collect your car. </p>
+        `;
+        document.getElementById('bill').innerHTML = bill;
+        document.getElementById('bill').style.display = 'block';
+    });
+
+    function generateAppointmentNumber() {
+        return 'APPT' + Math.floor(Math.random() * 1000000);
+    }
+</script>
+
+</body>
+
+</html>

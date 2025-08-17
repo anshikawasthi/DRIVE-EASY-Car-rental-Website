@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Wash Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('sky.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .car-details {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 5px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .car-details img {
+            width: 50%; /* Adjust size as needed */
+            height: auto;
+            object-fit: cover;
+        }
+        .car-info {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .youtube-video {
+            margin: 0 auto;
+            text-align: center;
+        }
+        .booking {
+            text-align: center;
+        }
+        .confirm-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .message-box {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="car-details">
+        <img src="carwash.jpg" alt="Car Wash Machine">
+        <div class="car-info">
+            <p><strong>BRAND:</strong> ATS ELGI</p>
+            <p><strong>APPLICATION:</strong> GARAGE SMART CAR WASH</p>
+            <p><strong>VOLTAGE:</strong> 400-440V / 50Hz</p>
+            <p><strong>BODY MATERIAL:</strong> STAINLESS STEEL</p>
+            <p><strong>Technique:</strong> Friction Car Wash</p>
+            <p><strong>Motor Rating:</strong> 10 Hp</p>
+            <p><strong>Water Consumption:</strong> 50 - 75 Lt</p>
+            <p><strong>Motor Power:</strong> 2-5 hp</p>
+            <p><strong>Flow Rate:</strong> 26.3 lpm</p>
+          
+        </div>
+    </div>
+
+    <div class="youtube-video">
+        <!-- YouTube embedded video -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wt9-HHeUx10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="booking">
+        <button class="confirm-btn" onclick="confirmBooking()">Confirm Booking</button>
+    </div>
+
+    <div class="message-box" id="messageBox">
+        <p>Your booking is confirmed!</p>
+        <p>Here is your reference ID: <strong>#123456</strong></p>
+        <p>Please make sure to visit our service center and provide your reference ID. Payment will only be accepted on-site..</p>
+    </div>
+</div>
+
+<script>
+    function confirmBooking() {
+        document.getElementById('messageBox').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
+

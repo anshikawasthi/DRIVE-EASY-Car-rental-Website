@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRIVE EASY Rentals</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #EBF4FA;
+        }
+
+        /* Added styles for content visibility */
+        .content {
+            margin-top: 50px;
+            display: none;
+            background-size: cover;
+        }
+
+        /* Added styles for animated GIFs */
+        .gif {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Added style for back button */
+        #back-button {
+            display: none;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Added style for navigation buttons */
+        nav a,
+        .toggle-content {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #fff;
+            background-color: #333;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header style="background-color: #333; color: #fff; padding: 20px 0; text-align: center; margin-bottom: 20px;">
+        <h1 style="color: #1F45FC;font-family: 'fantasy';">DRIVE EASY</h1>
+        <!-- Additional navigation buttons -->
+        <nav>
+            
+            <a href="home.html" style="background-color: gray; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Home</a>
+            <a href="about.html" style="padding: 10px 20px; text-decoration: none; font-weight: bold;">About</a>
+            <a href="services1.html" style="padding: 10px 20px; text-decoration: none; font-weight: bold;">Services</a>
+            <a href="feedback.html" style="padding: 10px 20px; text-decoration: none; font-weight: bold;">Feedback</a>
+            <a href="ourcars.html" style="padding: 10px 20px; text-decoration: none; font-weight: bold;">Our Cars</a>
+        </nav>
+        </nav>
+    </header>
+
+    <nav style="text-align: center; margin-top: 20px;">
+        <button class="toggle-content" data-target="about-content">About Us</button>
+        <button class="toggle-content" data-target="privacy-content">Privacy Policy</button>
+        <button class="toggle-content" data-target="help-content">Help & FAQs</button>
+    </nav>
+
+    <div style="max-width: 1200px; margin: 0 auto; padding: 10px;">
+        <!-- About Us Content -->
+        <div id="about-content" class="content" style="background-image: url('about_us.gif');">
+            <h2 style="font-family: 'fantasy';">About Us</h2>
+            <p>Welcome to DRIVE EASY Rentals, your premier destination for hassle-free car rentals! At DRIVE EASY, we are committed to providing you with convenient and reliable transportation solutions for your travel needs.</p>
+            <p>Our website offers a user-friendly platform where you can easily browse through our extensive fleet of vehicles, compare prices, and make reservations with just a few clicks. Whether you need a compact car for city travel, an SUV for family adventures, or a luxury sedan for business trips, we've got you covered.</p>
+            <!-- Booking Process added -->
+            <h3 style="font-family: 'fantasy';">Booking Process</h3>
+            <p>Booking at DRIVE EASY Rentals is hassle-free and straightforward. Simply select your pickup and drop-off locations, along with the date and time you need the car. After choosing your preferred car model, review your selection and click "Confirm Booking." Once confirmed, your reservation details will be provided, including payment instructions and contact information. Get ready to enjoy your rental experience with DRIVE EASY!</p>
+            <!-- Terms and Conditions added -->
+            <h3 style="font-family: 'fantasy';">Terms and Conditions</h3>
+            <p>Before making a reservation, we encourage you to review our terms and conditions carefully. These terms outline important information regarding rental policies, insurance coverage, cancellation policies, and other important details. <a href="t&c.html">Terms and conditions</a></p>
+            <!-- Safety Protocols added -->
+            <h3 style="font-family: 'fantasy';">Safety Protocols</h3>
+            <p>At DRIVE EASY, your safety is our top priority. We adhere to strict safety protocols to ensure that our vehicles are clean, well-maintained, and sanitized before each rental. Additionally, our professional staff undergo regular training to ensure that they provide you with the highest level of service and assistance.</p>
+            <!-- Animated GIF added -->
+            <img class="gif" src="car.23.gif" alt="About Us GIF">
+        </div>
+
+        <!-- Privacy Policy Content -->
+        <div id="privacy-content" class="content" style="background-image: url('privacy_policy_image.jpg');">
+            <h2 style="font-family: 'fantasy';">Privacy Policy</h2>
+            <!-- Privacy Policy content added -->
+            <p>At DRIVE EASY Rentals, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data when you interact with our website and services.</p>
+            <h3 style="font-family: 'fantasy';">1. Information We Collect</h3>
+            <p>We may collect personal information such as your name, email address, phone number, and payment details when you make a reservation or contact our customer support team. We also gather non-personal information such as your IP address, browser type, and device information for analytics purposes.</p>
+            <!-- More Privacy Policy content added -->
+            <h3 style="font-family: 'fantasy';">2. How We Use Your Information</h3>
+            <p>We use the information we collect to process reservations, improve our services, communicate with you, and personalize your experience on our website. We may also use your data for marketing purposes with your consent.</p>
+            <!-- More Privacy Policy content added -->
+            <h3 style="font-family: 'fantasy';">3. Data Security</h3>
+            <p>We employ industry-standard security measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. Your data is stored securely and only accessed by authorized personnel.</p>
+            <!-- More Privacy Policy content added -->
+            <h3 style="font-family: 'fantasy';">4. Sharing Your Information</h3>
+            <p>We may share your personal information with third-party service providers who assist us in delivering our services, processing payments, or analyzing website usage. We do not sell or rent your information to third parties for marketing purposes without your explicit consent.</p>
+            <!-- More Privacy Policy content added -->
+            <h3 style="font-family: 'fantasy';">5. Your Rights</h3>
+            <p>You have the right to access, correct, or delete your personal information stored in our systems. You may also withdraw your consent for certain data processing activities. Please contact us if you wish to exercise these rights.</p>
+            <!-- Animated GIF added -->
+            <img class="gif" src="car.20.gif" alt="Privacy Policy GIF">
+        </div>
+
+        <!-- Help & FAQs Content -->
+        <div id="help-content" class="content" style="background-image: url('help_faqs.gif');">
+            <h2 style="font-family: 'fantasy';">Help & FAQs</h2>
+            <!-- Help & FAQs content added -->
+            <h3>1. How do I make a reservation?</h3>
+            <p>To make a reservation, simply browse through our fleet of vehicles, select your desired vehicle, choose your pickup and drop-off locations, select any additional services or equipment, and proceed to checkout.</p>
+            <!-- More Help & FAQs content added -->
+            <h3>2. What payment methods do you accept?</h3>
+            <p>We accept payments via credit/debit cards and online payment gateways. All transactions are securely processed.</p>
+            <!-- More Help & FAQs content added -->
+            <h3>3. What is your cancellation policy?</h3>
+            <p>Our cancellation policy varies depending on the type of reservation and the timing of the cancellation.</p>
+            <!-- More Help & FAQs content added -->
+            <h3>4. How do I contact customer support?</h3>
+            <p>You can contact our customer support team via phone at +012 345 67890 or email at driveeasy@gmail.com. We're available to assist you 24/7.</p>
+            <!-- More Help & FAQs content added -->
+            <h3>5. Are there any age restrictions for renting a car?</h3>
+            <p>Yes, renters must typically be at least 21 years old to rent a car. Additional age restrictions may apply depending on the vehicle type and rental location.</p>
+            <!-- Animated GIF added -->
+            <img class="gif" src="car.21.gif" alt="Help & FAQs GIF">
+        </div>
+
+        <!-- Back Button -->
+        <button id="back-button" onclick="goBack()" style="margin-top: 20px;">Back to Main Menu</button>
+    </div>
+
+    <footer style="background-color: #444; color: #fff; padding: 20px; text-align: left; margin-top: 20px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div>
+                <p>Get In Touch:</p>
+                <p>📍 123 Street, Hyderabad, India&nbsp; &nbsp; &nbsp; 📞 +012 345 67890 &nbsp; &nbsp; &nbsp; ✉️driveeasy@gmail.com</p>
+                <p>Follow Us: &nbsp; &nbsp; &nbsp; 📸 📘 🐦</p>
+                <p>Useful Links:</p>
+                <p><a href="privacy.html">Private Policy</a> | <a href="t&c.html">Terms and conditions </a>| <a href="help.html">Help & FAQs</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to toggle content visibility
+        document.querySelectorAll('.toggle-content').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const targetContent = document.getElementById(targetId);
+                // Hide all content and show back button
+                document.querySelectorAll('.content').forEach(content => {
+                    content.style.display = 'none';
+                });
+                document.getElementById('back-button').style.display = 'block';
+                // Show the clicked content
+                targetContent.style.display = 'block';
+            });
+        });
+
+        // JavaScript function to go back to main menu
+        function goBack() {
+            // Hide all content and hide back button
+            document.querySelectorAll('.content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById('back-button').style.display = 'none';
+            // Show navigation buttons
+            document.querySelectorAll('.toggle-content').forEach(button => {
+                button.style.display = 'inline-block';
+            });
+        }
+    </script>
+
+</body>
+
+</html>
